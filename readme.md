@@ -1,0 +1,1 @@
+O presente código foi desenvolvido por Weslem Sousa e Davi Ethan, a pedido do professor Antônio Soares. O projeto consiste em uma lista de tarefas, permitindo a inserção de atividades do cotidiano. Utilizamos HTML e CSS para a estruturação e estilização da interface, enquanto a linguagem de programação Python foi empregada para a lógica do funcionamento da aplicação.

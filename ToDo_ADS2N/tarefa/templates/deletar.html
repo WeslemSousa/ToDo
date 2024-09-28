@@ -1,0 +1,48 @@
+
+
+{% block content %}
+<body style="background-image: url('https://cdn.pixabay.com/photo/2022/10/03/21/47/fog-7496901_640.jpg');
+background-size: cover;
+text-align: center;
+font-family: 'Consolas', monospace;">
+    <div>
+        <div>
+            <h1 style="font-family: 'Consolas', monospace;
+            text-align: center;
+            color: darkred">Deletar Tarefa</h1>
+        </div>
+        <div>
+            <p>Tem certeza que deseja deletar a tarefa ?<strong>{{ object.nome_tarefa }}?</p>
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    <button type="submit" 
+                    style="border-radius: 10px;
+                            border-radius: 15px;
+                            border: 2px solid;
+                            background-color: rgba(255, 255, 255, 0.25);
+                            color: darkred;">
+                            Deletar tarefa
+                        </button>
+
+                    <button style="border-radius: 10px;
+                            border-radius: 15px;
+                            border: 2px solid;
+                            background-color: rgba(255, 255, 255, 0.25);
+                            color: darkred;">
+                            <a href="{% url 'atualizar' pk=object.pk %}" style="text-decoration: none; color: green">Atualizar</a>
+                        </button>
+
+                    <button style="border-radius: 10px;
+                            border-radius: 15px;
+                            border: 2px solid;
+                            background-color: rgba(255, 255, 255, 0.25);
+                            color: darkred;">
+                            <a href="{% url 'lista' %}" class="btn btn-secondary" style="text-decoration: none; color: black">Cancelar</a>
+                        </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+{% endblock %}

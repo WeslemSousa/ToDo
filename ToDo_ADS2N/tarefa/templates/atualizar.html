@@ -1,0 +1,37 @@
+
+
+{% block content %}
+<body style="background-image: url('https://cdn.pixabay.com/photo/2022/10/03/21/47/fog-7496901_640.jpg');
+background-size: cover;
+text-align: center;
+font-family: 'Consolas', monospace;">
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h1>Editar Tarefa</h1>
+    <div style="align-items: center; justify-content: center; display: flex; margin-bottom: 30px;">
+    <table style="text-align: center;
+    border: 2px solid;
+    border-radius: 15px;">
+      {{ form.as_table }}
+    </table>
+  </div>
+    <div>
+      <div class="buttons-container">
+        <input type="submit" value="Salvar Alterações" style="border-radius: 10px;
+                                                                border-radius: 15px;
+                                                                border: 2px solid;
+                                                                background-color: rgba(255, 255, 255, 0.25);
+                                                                color: green;">
+                                                                
+      <button style="border-radius: 10px;
+                    border-radius: 15px;
+                    border: 2px solid;
+                    background-color: rgba(255, 255, 255, 0.25);
+                    color: darkred;">
+          <a href="{% url 'lista' %}" class="btn btn-secondary" style="text-decoration: none; color: darkred">Cancelar</a>
+      </button>
+      </div>
+    </div>
+  </form>
+</body>
+{% endblock %}

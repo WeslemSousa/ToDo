@@ -1,0 +1,32 @@
+{% block content %}
+
+<body style=" font-family: 'Consolas', monospace;
+background-image: url('https://cdn.pixabay.com/photo/2022/10/03/21/47/fog-7496901_640.jpg');
+background-size: cover;
+display: block;
+justify-content: center;
+align-items: center;
+text-align: center;">
+
+<form action="" method="post" style="border-radius: 10px;
+    padding: 10px;
+    margin: 17%;
+    text-align: center;
+    display: block;
+    align-items: center;
+    border-radius: 15px;
+    border: 2px solid;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: darkred;">
+{% csrf_token %}
+    {{ form }}
+
+    <input type="submit"  value="Cadastrar" placeholder="Digite a tarefa" style="background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 15px;
+    border-color: darkred;
+    text-align: right;">
+</form>
+</body>
+
+{% endblock %}
